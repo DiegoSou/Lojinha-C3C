@@ -1,19 +1,11 @@
 public class Pessoa{
-    // Definir atributos
-    // modificador tipoPrimitivo nome
     public String nome; 
     public String rg;
     public int cpf;
-    public String email;
-    public int telefone;
+    public Email email = new Email();
+    public Telefone celular = new Telefone();
     public int idade;
     public String endereco;
-    
-    // Construtor
-    // modificador Classe(tipo arg, tipo arg2){
-    //     Corpo do Construtor
-    //     this -> Variável de referência ao objeto atual
-    // }
     public Pessoa(String n, int c){
         this.nome = n;
         this.cpf = c;
@@ -22,14 +14,10 @@ public class Pessoa{
 
     }
 
-    // Definir os métodos
-    // modificador tipoRetorno nome(tipo arg,tipo arg2){
-    //     Corpo do método
-    // }
     public void dadosPessoais(){
         System.out.println("Nome: " + nome);
         System.out.println("Idade:" + idade);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("E-mail: " + email);
+        System.out.println("Telefone: " + celular.mostrarTelefone());
+        email.exibirEmail();
     }
 }
