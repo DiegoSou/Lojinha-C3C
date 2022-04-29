@@ -1,6 +1,6 @@
 public class Email{
-    public String usuario;
-    public String servidor;
+    private String usuario;
+    private String servidor;
 
     public Email(String u, String s){
         this.usuario = u;
@@ -9,7 +9,19 @@ public class Email{
     public Email(){
 
     }
-    public void exibirEmail(){
+    public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getServidor() {
+		return servidor;
+	}
+	public void setServidor(String servidor) {
+		this.servidor = servidor;
+	}
+	public void exibirEmail(){
         System.out.println(this.usuario + "@"+ this.servidor);
     }
 }
